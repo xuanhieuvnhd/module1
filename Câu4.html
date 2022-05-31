@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4: Biểu diễn hình tròn</title>
+</head>
+<body>
+<canvas width="500px" height="500px" id="canvas" style="border: 2px solid"></canvas>
+<script>
+        class Circle {
+        x;
+        y;
+        radius;
+        color;
+
+        constructor(x, y, radius, color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+    }
+    }
+
+        let hinhTron = new Circle(10, 10, 100, "#00000")
+        let canvas = document.getElementById("canvas").getContext("2d")
+        canvas.fillStyle = hinhTron.color
+        canvas.beginPath()
+        canvas.arc(hinhTron.x, hinhTron.y, hinhTron.radius, 0, 2 * Math.PI)
+        canvas.fill()
+
+</script>
+</body>
+</html>
